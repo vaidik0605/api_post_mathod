@@ -68,6 +68,27 @@ class _view_pageState extends State<view_page> {
                       leading: Text("${user.id}"),
                       title: Text("${user.name}"),
                       subtitle: Text("${user.contact}"),
+                      trailing: DropdownButton(
+                        items: const [
+                          DropdownMenuItem(
+                            value: 1,
+                            child: Text("data"),
+                          ),
+                          DropdownMenuItem(
+                            value: 2,
+                            child: Text("data1"),
+                          ),
+                          DropdownMenuItem(
+                            value: 3,
+                            child: Text("data2"),
+                          ),
+                          DropdownMenuItem(
+                            value: 4,
+                            child: Text("data3"),
+                          ),
+                        ],
+                        onChanged: (value) {},
+                      ),
                     );
                   },
                 )

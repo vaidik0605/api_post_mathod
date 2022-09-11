@@ -17,7 +17,7 @@ class _insert_pageState extends State<insert_page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Insert page"),
+        title: const Text("Insert page"),
         centerTitle: true,
       ),
       body: Column(
