@@ -23,7 +23,7 @@ class _view_pageState extends State<view_page> {
   List l = [];
   bool status = false;
   Future<void> loadData() async {
-    Map m = {'id': '15'};
+    // Map m = {'id': '15'};
 
     // var url = Uri.parse(
     //     'https://cdmidevelopment.000webhostapp.com/9to10/viewdata.php');
@@ -48,6 +48,7 @@ class _view_pageState extends State<view_page> {
     print(l);
   }
 
+  int store = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,6 +70,7 @@ class _view_pageState extends State<view_page> {
                       title: Text("${user.name}"),
                       subtitle: Text("${user.contact}"),
                       trailing: DropdownButton(
+                        value: store,
                         items: const [
                           DropdownMenuItem(
                             value: 1,
@@ -87,7 +89,10 @@ class _view_pageState extends State<view_page> {
                             child: Text("data3"),
                           ),
                         ],
-                        onChanged: (value) {},
+                        onChanged: (value) {
+                          store = value as int;
+                          setState(() {});
+                        },
                       ),
                     );
                   },
